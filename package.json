@@ -1,0 +1,19 @@
+{
+  "name": "ground-fewa",
+  "version": "1.0.0",
+  "description": "This project explores of the ground-level foundations and concepts to be used across future Front End Web Applications.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve ./src/index.html -p 8080 --public-url / --dist-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "harris.logan@outlook.com",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}

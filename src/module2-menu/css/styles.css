@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+h1 {
+    margin: 1em;
+}
+
+.page-title {
+    display: block;
+    font-size: 175%;
+    text-align: center;
+}
+
+.page-title-sm {
+    display: none;
+    font-family: Cambria, Cochin, Georgia, serif;
+    font-size: 150%;
+    text-align: left;
+    margin-left: 2%;
+}
+
+section {
+    position: relative;
+    background: lightgray;
+    overflow-y: auto;
+    border: 1px solid black;
+    margin: 2% 2%;
+    max-height: 12em;
+}
+
+section:hover {
+    cursor: ns-resize;
+}
+
+.section-title {
+    font-size: 125%;
+    border:1px solid black;
+    width: 12em;
+    text-align: center;
+    padding: 0.25em;
+    float: right;
+}
+
+.section-text {
+    clear: right;
+    padding: 1em;
+}
+
+#title-blueberry {
+    background-color: cornflowerblue;
+}
+
+#title-peach {
+    background-color: peachpuff;
+}
+
+#title-strawberry {
+    background-color: palevioletred;
+}
+
+/********** Large (Desktop) devices only **********/
+@media (min-width: 992px) {
+
+    .col-lg-1,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12 {
+        float: left;
+        /* border: 1px solid blue; */
+    }
+
+    .col-lg-1 {
+        width: 8.33%;
+    }
+
+    .col-lg-2 {
+        width: 16.66%;
+    }
+
+    .col-lg-3 {
+        width: 25%;
+    }
+
+    /*
+    This is the only LG sizing option we're using.
+    (This considers the 2% margin on the sections.)
+    */
+    .col-lg-4 {
+        width: 29.33%;
+    }
+
+    .col-lg-5 {
+        width: 41.66%;
+    }
+
+    .col-lg-6 {
+        width: 50%;
+    }
+
+    .col-lg-7 {
+        width: 58.33%;
+    }
+
+    .col-lg-8 {
+        width: 66.66%;
+    }
+
+    .col-lg-9 {
+        width: 74.99%;
+    }
+
+    .col-lg-10 {
+        width: 83.33%;
+    }
+
+    .col-lg-11 {
+        width: 91.66%;
+    }
+
+    .col-lg-12 {
+        width: 100%;
+    }
+}
+
+/********** Medium (Tablet) devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12 {
+        float: left;
+        /* border: 1px solid green; */
+    }
+
+    .col-md-1 {
+        width: 8.33%;
+    }
+
+    .col-md-2 {
+        width: 16.66%;
+    }
+
+    .col-md-3 {
+        width: 25%;
+    }
+
+    .col-md-4 {
+        width: 33.33%;
+    }
+
+    .col-md-5 {
+        width: 41.66%;
+    }
+
+    /*
+    This is one of the MD sizing options we're using.
+    (This considers the 2% margin on the sections.)
+    */
+    .col-md-6 {
+        width: 46%;
+    }
+
+    .col-md-7 {
+        width: 58.33%;
+    }
+
+    .col-md-8 {
+        width: 66.66%;
+    }
+
+    .col-md-9 {
+        width: 74.99%;
+    }
+
+    .col-md-10 {
+        width: 83.33%;
+    }
+
+    .col-md-11 {
+        width: 91.66%;
+    }
+
+    /*
+    This is one of the MD sizing options we're using.
+    (This considers the 2% margin on the sections.)
+    */
+    .col-md-12 {
+        width: 96%;
+    }
+}
+
+/********** Small/XS (Mobile) devices only **********/
+@media (max-width: 767px) {
+
+    .page-title {
+        display: none;
+    }
+
+    .page-title-sm {
+        display: block;
+    }
+
+    .section-title {
+        width: 100% !important;
+    }
+
+    .col-sm-1,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12 {
+        float: left;
+        /* border: 1px solid red; */
+    }
+
+    .col-sm-1 {
+        width: 8.33%;
+    }
+
+    .col-sm-2 {
+        width: 16.66%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+    .col-sm-4 {
+        width: 33.33%;
+    }
+
+    .col-sm-5 {
+        width: 41.66%;
+    }
+
+    .col-sm-6 {
+        width: 50%;
+    }
+
+    .col-sm-7 {
+        width: 58.33%;
+    }
+
+    .col-sm-8 {
+        width: 66.66%;
+    }
+
+    .col-sm-9 {
+        width: 74.99%;
+    }
+
+    .col-sm-10 {
+        width: 83.33%;
+    }
+
+    .col-sm-11 {
+        width: 91.66%;
+    }
+
+    /*
+    This is the only SM sizing option we're using.
+    (This considers the 2% margin on the sections.)
+    */
+    .col-sm-12 {
+        width: 96%;
+    }
+}
