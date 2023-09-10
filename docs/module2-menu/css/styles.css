@@ -30,7 +30,7 @@ h1 {
 section {
     position: relative;
     background: lightgray;
-    overflow-y: auto;
+    overflow: hidden;
     border: 1px solid black;
     margin: 2% 2%;
     max-height: 12em;
@@ -38,6 +38,7 @@ section {
 
 section:hover {
     cursor: ns-resize;
+    overflow: scroll;
 }
 
 .section-title {

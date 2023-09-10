@@ -4,7 +4,7 @@
   "description": "This project explores of the ground-level foundations and concepts to be used across future Front End Web Applications.",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve ./src/index.html -p 8080 --public-url / --dist-dir dist",
+    "start": "parcel serve ./docs/index.html -p 8080 --public-url / --dist-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
