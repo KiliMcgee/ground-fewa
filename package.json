@@ -6,7 +6,7 @@
   "scripts": {
     "build": "parcel build --public-url",
     "clean": "rm -rf node_modules/ dist/ package-lock.json .parcel-cache",
-    "start": "parcel serve ./docs/index.html -p 8080 --public-url / --dist-dir dist",
+    "start": "parcel ./docs/index.html -p 8080 --public-url / --dist-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
