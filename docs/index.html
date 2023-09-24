@@ -9,8 +9,10 @@
     </head>
     <body>
         <div class="container mt-5">
-            <h1>Repository Content</h1>
-            <table class="table table-striped">
+            <h1 class="text-center">F.ront E.nd W.eb A.pplications</h1>
+            <hr>
+            <h3>Repository Content</h3>
+            <table class="table table-hover table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Module</th>
@@ -18,20 +20,34 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr ondblclick="appendToCurrentURL('module2-menu/index.html')">
                         <td>Module 2</td>
                         <td><a href="./module2-menu/index.html">/module2-menu/index.html</a></td>
                     </tr>
-                    <tr>
+                    <tr ondblclick="appendToCurrentURL('module3-bootstrap-menu/index.html')">
                         <td>Module 3</td>
                         <td><a href="./module3-bootstrap-menu/index.html">/module3-bootstrap-menu/index.html</a></td>
                     </tr>
-                    <tr>
+                    <tr ondblclick="appendToCurrentURL('module4-js-arrays/index.html')">
                         <td>Module 4</td>
                         <td><a href="./module4-js-arrays/index.html">/module4-js-arrays/index.html</a></td>
+                    </tr>
+                    <tr ondblclick="appendToCurrentURL('module5-js-menu/index.html')">
+                        <td>Module 5</td>
+                        <td><a href="./module5-js-menu/index.html">/module5-js-menu/index.html</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
+        <script>
+            function appendToCurrentURL(suffix) {
+                var currentURL = window.location.href;
+                var newURL = currentURL + suffix;
+
+                // Navigate to the new URL
+                window.location.href = newURL;
+            }
+        </script>
     </body>
 </html>
