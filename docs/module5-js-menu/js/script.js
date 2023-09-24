@@ -159,12 +159,19 @@ dc.loadAboutPage = function () {
 
 // Build and insert a random rating into the about view html
 function buildAndShowRandomRating (aboutHtml) {
-  var randomRating = Math.floor(Math.random() * 5) + 1;
+  let randomRating = Math.floor(Math.random() * 5) + 1;
   console.log(`Generate rating is: ${randomRating}`);
 
-  var aboutHtmlWithSubstitutedProperty = insertProperty(aboutHtml, "randomRating", randomRating);
+  let aboutHtmlWithSubstitutedProperties = insertProperty(aboutHtml, "randomRating", randomRating);
 
-  insertHtml("#main-content", aboutHtmlWithSubstitutedProperty);
+  let currStarClass;
+  for (let i = 1; i <= 5; i++) {
+    currStarClass = randomRating > 0 ? "fa fa-star" : "fa fa-star-o";
+    randomRating--;
+    aboutHtmlWithSubstitutedProperties = insertProperty(aboutHtmlWithSubstitutedProperties, `class${i}`, currStarClass);
+  }
+
+  insertHtml("#main-content", aboutHtmlWithSubstitutedProperties);
 }
 
 // Load the menu categories view
