@@ -160,13 +160,13 @@ dc.loadAboutPage = function () {
 // Build and insert a random rating into the about view html
 function buildAndShowRandomRating (aboutHtml) {
   let randomRating = Math.floor(Math.random() * 5) + 1;
-  console.log(`Generate rating is: ${randomRating}`);
+  console.log(`Random rating is: ${randomRating}`);
 
   let aboutHtmlWithSubstitutedProperties = insertProperty(aboutHtml, "randomRating", randomRating);
 
   let currStarClass;
   for (let i = 1; i <= 5; i++) {
-    currStarClass = randomRating > 0 ? "fa fa-star" : "fa fa-star-o";
+    currStarClass = randomRating > 0 ? "fa fa-star fa-spin fa-5x" : "fa fa-star-o fa-4x";
     randomRating--;
     aboutHtmlWithSubstitutedProperties = insertProperty(aboutHtmlWithSubstitutedProperties, `class${i}`, currStarClass);
   }
