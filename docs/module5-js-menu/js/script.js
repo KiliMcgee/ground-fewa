@@ -22,6 +22,7 @@ var menuItemsUrl =
   "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
+var aboutHtml = "snippets/about-snippet.html";
 
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
@@ -42,7 +43,6 @@ var insertProperty = function (string, propName, propValue) {
   var propToReplace = "{{" + propName + "}}";
   string = string
     .replace(new RegExp(propToReplace, "g"), propValue);
-    // console.log(`Dumping the resulting string from insertProperty: ${string}`);
   return string;
 };
 
@@ -143,6 +143,29 @@ function chooseRandomCategory (categories) {
   return categories[randomArrayIndex];
 }
 
+/**
+ *****************************
+ * Additional JHU requirement.
+ *****************************
+ */
+
+ // Load the about view page
+dc.loadAboutPage = function () {
+  $ajaxUtils.sendGetRequest(
+    aboutHtml,
+    buildAndShowRandomRating,
+    false);
+}
+
+// Build and insert a random rating into the about view html
+function buildAndShowRandomRating (aboutHtml) {
+  var randomRating = Math.floor(Math.random() * 5) + 1;
+  console.log(`Generate rating is: ${randomRating}`);
+
+  var aboutHtmlWithSubstitutedProperty = insertProperty(aboutHtml, "randomRating", randomRating);
+
+  insertHtml("#main-content", aboutHtmlWithSubstitutedProperty);
+}
 
 // Load the menu categories view
 dc.loadMenuCategories = function () {
@@ -156,7 +179,6 @@ dc.loadMenuCategories = function () {
 // Load the menu items view
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
-  console.log('Call to loadMenuItems. Dumping argument: ', categoryShort);
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     menuItemsUrl + categoryShort + ".json",
