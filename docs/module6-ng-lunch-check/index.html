@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="LunchChecker">
+  <head>
+    <title>lharr124 | Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+    <!-- Migrated the styles to their own dedicated sheet. -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Importing the help of Angular. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="LunchCheckerController">
+    <div class="container">
+      <h1>Lunch Checker</h1>
+
+        <div class="form-group">
+          <div class="padding-top alert alert-info">
+            We do NOT consider empty strings or empty items (e.g. ",, ,") towards the total count.
+          </div>
+          <input id="lunch-menu"
+                 ng-model="input"
+                 type="text"
+                 placeholder="Enter a list of comma separated dishes you usually have for lunch"
+                 class="form-control" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-default"
+                  ng-click="checkLunchFn()">
+            Check If Too Much
+          </button>
+        </div>
+        <div class="form-group message text-center" ng-class="dynamicClass">
+          {{ checkMessage }}
+        </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,21 @@
+.form-group * {
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.message {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0.25em;
+}
+
+.green {
+    color: forestgreen;
+    outline: solid 2px forestgreen;
+}
+
+.red {
+    color: indianred;
+    outline: solid 2px indianred;
+}
