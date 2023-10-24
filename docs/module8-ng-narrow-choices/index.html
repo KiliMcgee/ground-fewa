@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="NarrowChoicesApp">
+
+<head>
+  <title>lharr124 | Narrow Choices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- Importing the help of Angular. -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <!-- Import my angular app implementation -->
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div class="container" ng-controller="NarrowChoicesController as narrowCtlr">
+    <h1>Narrow Down Your Chinese Menu Choice</h1>
+
+    <div class="form-group">
+      <input class="form-control" ng-model="searchTerm" type="text" placeholder="Start searching...">
+    </div>
+    <div class="form-group narrow-button">
+      <button class="btn btn-primary" ng-click="narrowCtlr.search()">
+        Narrow It Down For Me!
+      </button>
+    </div>
+
+    <found-items found-items="...." on-remove="...."></found-items>
+    <span class="error" ng-if="narrowCtlr.foundItemsList?.length">
+      LIST ITEMS DETECTED.
+    </span>
+  </div>
+
+</body>
+
+</html>
