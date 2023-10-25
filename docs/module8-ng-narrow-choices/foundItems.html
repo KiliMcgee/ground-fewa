@@ -1,0 +1,7 @@
+<!doctype html>
+<ul>
+    <li class="list-padding" ng-repeat="item in narrowCtlr.foundItems">
+        <button ng-click="narrowCtlr.onRemove({index: $index});">Don't want!</button>
+        {{ item.name }}, {{ item.short_name }} || {{ item.description }}
+    </li>
+</ul>

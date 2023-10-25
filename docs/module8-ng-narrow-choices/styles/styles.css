@@ -5,6 +5,9 @@ input[type="text"] {
   width: 200px;
   float: left;
 }
+.error {
+  color: red
+}
 .narrow-button {
   float: left;
   margin-left: 10px;
@@ -29,6 +32,9 @@ input[type="text"] {
   border-radius: 50%;
   width: 3em;
   height: 3em;
+}
+.list-padding {
+  margin: 0.5em;
 }
 @-webkit-keyframes load8 {
   0% {
