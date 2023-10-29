@@ -28,15 +28,13 @@
       </button>
     </div>
 
-    <br>
-    <br>
-
-    <found-items items="narrowCtlr.foundItems"
-                  on-remove="narrowCtlr.removeItemAtIndex(index)">
+    <found-items items="narrowCtlr.foundItemsList" on-remove="narrowCtlr.removeItemAtIndex(index)">
     </found-items>
-    <h3 class="error" ng-if="narrowCtlr.isInvalidSearch()">
+
+    <h3 class="error" ng-if="narrowCtlr.foundItemsList.length == 0">
       No items matched your search term.
     </h3>
+
   </div>
 
 </body>

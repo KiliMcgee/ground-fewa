@@ -5,8 +5,12 @@ input[type="text"] {
   width: 200px;
   float: left;
 }
+.customDirective {
+  clear: left;
+}
 .error {
-  color: red
+  color: red;
+  clear: left;
 }
 .narrow-button {
   float: left;
@@ -34,7 +38,12 @@ input[type="text"] {
   height: 3em;
 }
 .list-padding {
-  margin: 0.5em;
+  margin: 0.4em;
+  clear: left;
+}
+hr {
+  clear: left;
+  border-width: 2px;
 }
 @-webkit-keyframes load8 {
   0% {
