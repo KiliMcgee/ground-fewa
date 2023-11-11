@@ -1,0 +1,11 @@
+<div>
+    <h4>Choose a category from below to further explore the menu items within.</h4>
+    <table class="table table-hover">
+        <tr ng-repeat="el in $ctrl.elements">
+            <td class="pointer"
+                ui-sref="items({ categoryShortName: el.short_name })">
+                {{ el.name }}
+            </td>
+        </tr>
+    </table>
+</div>

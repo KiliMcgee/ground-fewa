@@ -1,0 +1,10 @@
+<nav>
+    <ol class="breadcrumb">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="categories">Categories</a></li>
+        <li class="active">{{ controller.element.category.name }}</li>
+    </ol>
+</nav>
+
+<items-component element="controller.element" message="controller.message">
+</items-component>

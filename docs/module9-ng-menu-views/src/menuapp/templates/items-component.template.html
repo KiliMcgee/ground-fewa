@@ -1,0 +1,21 @@
+<div ng-if="$ctrl.element.menu_items.length">
+    <h4>{{ $ctrl.message }}</h4>
+    <table class="table table-hover">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr ng-repeat="el in $ctrl.element.menu_items">
+            <td>
+                {{ el.name }}
+            </td>
+            <td>
+                {{ el.description }}
+            </td>
+            <td>
+                {{ el.price_large }}
+            </td>
+        </tr>
+    </table>
+</div>
