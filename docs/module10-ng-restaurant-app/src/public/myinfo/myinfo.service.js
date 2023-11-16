@@ -45,8 +45,7 @@
                     console.log('Encountered error when fetching favorite menu item: ', error);
                 });
 
-            const src = `/docs/module10-ng-restaurant-app/images/menu/${ dishParts[0].toUpperCase() }/${ service.profile.dish.toUpperCase() }.jpg`;
-            console.log('Dumping constructed src: ', src);
+            const src = `/module10-ng-restaurant-app/images/menu/${ dishParts[0].toUpperCase() }/${ service.profile.dish.toUpperCase() }.jpg`;
 
             service.profile.fetchedDish = {
                 src,
